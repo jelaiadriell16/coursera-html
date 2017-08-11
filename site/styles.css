@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#main-header span{
+    color: coral;
+}
+
+#main-header {
+    background: #000000;
+    padding: 10px 0;
+    color: #ffffff;
+}
