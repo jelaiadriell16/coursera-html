@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* GLOBAL */
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* #resume */
+
+#resume {
+    position: fixed;
+    margin-top: 250px;
+    padding: 20px;
+    background-color: #004ba0;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: all 0.2s ease-out;
+}
+
+#resume:hover {
+    padding-left: 60px;
+    background-color: #00835B;
+}
+
+#resume img {
+    vertical-align: middle;
+}
+
+/* HEADER */
+
+header {
+    height: 600px;
+    background: url("../assets/header-img2.jpg");
+    color: #fff;
+    text-align: center;
+}
+
+header .container {
+    font-size: 1.5em;
+    padding-top: 10%;
+}
+
+header .container h1 {
+    font-weight: 400;
+}
+
+#julius {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* #contact */
+
+#contact {
+    font-size: .7em;
+    /*text-align: right;
+*/    margin-top: 150px;
+}
+
+#fullname {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
