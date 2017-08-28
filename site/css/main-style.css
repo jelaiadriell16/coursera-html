@@ -9,7 +9,7 @@
 }
 
 .container {
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 
@@ -24,27 +24,6 @@ li {
 
 header, section {
     height: 600px;
-}
-
-/* #resume */
-
-#resume {
-    position: fixed;
-    margin-top: 250px;
-    padding: 20px;
-    background-color: #004ba0;
-    letter-spacing: 2px;
-    font-size: 20px;
-    transition: all 0.2s ease-out;
-}
-
-#resume:hover {
-    padding-left: 60px;
-    background-color: #00835B;
-}
-
-#resume img {
-    vertical-align: middle;
 }
 
 /* HEADER */
@@ -62,6 +41,7 @@ header .container {
 
 header .container h1 {
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
 #julius {
@@ -83,9 +63,36 @@ header .container h1 {
     margin-bottom: 10px;
 }
 
+#contact p {
+    margin-bottom: 5px;
+}
+
+/* #resume */
+
+#resume {
+    /*position: fixed;
+    margin-top: 250px;*/
+    background-color: #004ba0;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: all 0.2s ease-out;
+    text-align: center;
+}
+
+#resume:hover {
+    background-color: #00835B;
+}
+
+#resume img {
+    vertical-align: middle;
+}
+
 /* #work */
 
 #work-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    vertical-align: middle;
 }
+
+@
