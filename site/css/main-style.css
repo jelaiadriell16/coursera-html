@@ -8,8 +8,14 @@
     padding: 0;
 }
 
+body {
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #212121;
+}
+
 .container {
-    width: 100%;
+    width: 90%;
     margin: auto;
 }
 
@@ -22,8 +28,12 @@ li {
     list-style: none;
 }
 
-header, section {
+header{
     height: 600px;
+}
+
+section {
+    height: 100%;
 }
 
 /* HEADER */
@@ -70,13 +80,12 @@ header .container h1 {
 /* #resume */
 
 #resume {
-    /*position: fixed;
-    margin-top: 250px;*/
     background-color: #004ba0;
     letter-spacing: 2px;
     font-size: 12px;
     transition: all 0.2s ease-out;
     text-align: center;
+    clear: both;
 }
 
 #resume:hover {
@@ -89,10 +98,93 @@ header .container h1 {
 
 /* #work */
 
-#work-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    vertical-align: middle;
+#exp {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-@
+#exp span {
+    font-family: 'Playball', cursive;
+    font-size: 2em;
+}
+
+.date, .description {
+    float: left;
+}
+
+.date {
+    width: 30%;
+    /*text-align: center;*/
+    padding-top: 15px;
+}
+
+.description {
+    width: 70%;
+}
+
+.description li {
+    padding-left: 15px;
+}
+
+.job {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.company {
+    font-weight: bold;
+}
+
+.comp-add {
+    padding-bottom: 10px;
+}
+
+/* if the browser supports CSS Grid */
+@supports (display: grid)
+{   
+    /* tablet size */
+    @media screen and (min-width: 768px) 
+    {
+        body {
+            font-size: 16px;
+        }
+        .container {
+            width: 75%;
+        }
+
+        /*#resume {
+            position: fixed;
+            margin-top: 1px;
+            padding: 5px;
+        }
+        
+        #resume:hover {
+            padding-left: 20px;
+        } */  
+
+        #work-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .date {
+            padding-top: 0;
+            align-self: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .description {
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+        }
+        .comp-add {
+            padding-bottom: 0;
+        }
+    }
+}
