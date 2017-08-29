@@ -115,7 +115,7 @@ header .container h1 {
 
 .date {
     width: 30%;
-    /*text-align: center;*/
+    text-align: center;
     padding-top: 15px;
 }
 
@@ -142,49 +142,52 @@ header .container h1 {
     padding-bottom: 10px;
 }
 
-/* if the browser supports CSS Grid */
+/* if the browser supports css grid */
 @supports (display: grid)
-{   
-    /* tablet size */
-    @media screen and (min-width: 768px) 
+{
+    #work-grid {
+        display: grid;
+        grid-template-columns: 30% auto;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 10px;
+    }
+
+    .date {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .comp-add {
+        padding-bottom: 0;
+    }
+}
+
+/* tablet size */
+@media screen and (min-width: 768px) 
+{ 
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 75%;
+    }
+
+    #work-grid {
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@supports not (display: grid) {
+    @media screen and (min-width: 768px)
     {
-        body {
-            font-size: 16px;
-        }
-        .container {
-            width: 75%;
-        }
-
-        /*#resume {
-            position: fixed;
-            margin-top: 1px;
-            padding: 5px;
-        }
-        
-        #resume:hover {
-            padding-left: 20px;
-        } */  
-
-        #work-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20px;
-        }
-
-        .date {
-            padding-top: 0;
-            align-self: center;
-            text-align: center;
-            width: 100%;
-        }
-
-        .description {
-            width: 100%;
-            align-self: center;
-            justify-self: center;
-        }
-        .comp-add {
-            padding-bottom: 0;
+        .date, .description {
+            width: 50%;
         }
     }
 }
