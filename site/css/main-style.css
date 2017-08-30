@@ -76,9 +76,9 @@ header .container h1 {
 /* #resume */
 
 #resume {
+    vertical-align: middle;
     background-color: #004ba0;
     letter-spacing: 2px;
-    font-size: 12px;
     transition: all 0.2s ease-out;
     text-align: center;
     clear: both;
@@ -90,6 +90,7 @@ header .container h1 {
 
 #resume img {
     vertical-align: middle;
+    padding: 5px;
 }
 
 /* #work-section */
