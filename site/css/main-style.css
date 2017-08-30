@@ -28,21 +28,18 @@ li {
     list-style: none;
 }
 
-header{
-    height: 600px;
-}
-
 /* HEADER */
 
 header {
-    background: url("../assets/header-img2.jpg");
+    height: 600px;
+    background: #1565C0;
     color: #fff;
     text-align: center;
 }
 
 header .container {
     font-size: 1.5em;
-    padding-top: 10%;
+    padding-top: 40px;
 }
 
 header .container h1 {
@@ -56,11 +53,17 @@ header .container h1 {
     font-weight: 400;
 }
 
+#mini-photo {
+    width: 150px;
+    border-radius: 50%;
+    border: 8px solid #CFD8DC;
+}
+
 /* #contact */
 
 #contact {
     font-size: .7em;
-    margin-top: 130px;
+    margin-top: 10px;
     letter-spacing: 1px;
 }
 
@@ -224,4 +227,19 @@ header .container h1 {
     }
     #skills-section .grid-container {
         grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 1200px)
+{
+    header {
+        background: url("../assets/header-img2.jpg");
+    }
+
+    #mini-photo {
+        width: 0px;
+    }
+
+    header .container {
+        padding-top: 100px;
+    }
 }
