@@ -32,10 +32,6 @@ header{
     height: 600px;
 }
 
-section {
-    height: 100%;
-}
-
 /* HEADER */
 
 header {
@@ -98,38 +94,42 @@ header .container h1 {
 
 /* #work */
 
-#exp {
+.headings {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
-#exp span {
+.headings span {
     font-family: 'Playball', cursive;
     font-size: 2em;
 }
 
-.date, .description {
+.left-side, .right-side {
     float: left;
 }
 
-.date {
+.left-side {
     width: 30%;
     text-align: center;
     padding-top: 15px;
 }
 
-.description {
+.right-side {
     width: 70%;
 }
 
-.description li {
+.right-side li {
     padding-left: 15px;
+    padding-bottom: 5px;
 }
 
-.job {
+.job, #skills-section .left-side {
     font-size: 1.2em;
     font-weight: bold;
+}
+.job {
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -142,28 +142,82 @@ header .container h1 {
     padding-bottom: 10px;
 }
 
+#skills-section {
+    height: 700px;
+    background-color: #78909C;
+    color: #ffffff;
+    clear: both;
+}
+
 /* if the browser supports css grid */
 @supports (display: grid)
 {
-    #work-grid {
+    .grid-container {
         display: grid;
         grid-template-columns: 30% auto;
         align-items: center;
         justify-content: center;
         grid-gap: 10px;
     }
+    #skills-section .grid-container {
+        grid-template-columns: auto auto;
+        padding-top: 10px;
+    }
 
-    .date {
+    #skills-section {
+        height: 550px; 
+    }
+
+    .left-side {
         padding-top: 0;
         width: 100%;
     }
 
-    .description {
+    .right-side {
         width: 100%;
     }
 
     .comp-add {
         padding-bottom: 0;
+    }
+
+    @media screen and (min-width: 360px)
+    {
+        #skills-section {
+            height: 490px;
+        }
+    }
+    @media screen and (min-width: 768px)
+    {
+        #skills-section {
+            height: 510px;
+        }
+    }
+}
+/* if the browser DOES NOT support css grid */
+@supports not (display: grid)
+{
+    #skills-section .left-side {
+        width: 50%;
+    }
+    #skills-section .right-side {
+        width: 50%;
+    }
+    #skills-section {
+        height: ;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        .left-side, .right-side {
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 360px)
+    {
+        #skills-section {
+            height: 600px;
+        }
     }
 }
 
@@ -177,17 +231,10 @@ header .container h1 {
         width: 75%;
     }
 
-    #work-grid {
+    .grid-container {
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
     }
-}
-
-@supports not (display: grid) {
-    @media screen and (min-width: 768px)
-    {
-        .date, .description {
-            width: 50%;
-        }
-    }
+    #skills-section .grid-container {
+        grid-template-columns: 1fr 1fr;
 }
